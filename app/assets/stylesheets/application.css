@@ -61,6 +61,7 @@ body {
 
 .table {
 	margin: 1em auto 1em;
+	border-collapse: collpase;
 }
 
 .field {
@@ -77,12 +78,3 @@ body {
 .list_line_even {
 	background: #f8b0f8;
 }
-
-.products {
-	table {
-		border-collapse: collapse;
-	}
-}
-.list-actions a:hover {
-}
-
