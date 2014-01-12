@@ -29,6 +29,16 @@ class ProductsControllerTest < ActionController::TestCase
 
     assert_redirected_to product_path(assigns(:product))
   end
+  test "should show links" do
+    get :index
+    assert_response :success
+    assert_select '.list_actions' do |actions|
+      actions.each do |action|
+        assert_select action, "a", 3
+      end
+    end
+  end
+
 
   test "should show product" do
     get :show, id: @product
