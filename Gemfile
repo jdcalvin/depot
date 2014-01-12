@@ -8,7 +8,7 @@ gem 'sqlite3'
 gem 'execjs'
 gem 'therubyracer'
 # Use SCSS for stylesheets
-gem 'foundation-rails', '~> 5.0.2.0'
+
 gem 'sass-rails', '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
@@ -34,7 +34,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 group :development, :test do
-	gem 'rspec-rails', '~> 3.0.0.beta'
+
 	gem 'turn'
 end
 
