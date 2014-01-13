@@ -16,4 +16,12 @@ module StoreHelper
 		end
 		return "#{stamp_hour}:#{time.strftime("%M")} #{stamp}"	
 	end
+
+	def visits
+		if @count >= 5
+			"You have visited this page #{@count} time".pluralize
+		else
+			return
+		end
+	end
 end
