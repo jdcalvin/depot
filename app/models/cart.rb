@@ -16,4 +16,7 @@ class Cart < ActiveRecord::Base
 		line_items.to_a.sum { |item| item.total_price}
 	end
 	
+	def empty_cart(cart_id)
+		end
+	
 end

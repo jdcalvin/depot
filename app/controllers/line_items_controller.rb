@@ -59,12 +59,14 @@ class LineItemsController < ApplicationController
   # DELETE /line_items/1
   # DELETE /line_items/1.json
   def destroy
-    current_cart = @line_item.cart
+    
+    @line_item = LineItem.find(params[:id])
+    
     @line_item.destroy
     respond_to do |format|    
-      if current_cart.line_items.empty?
-        format.html { redirect_to store_url,
-          notice: 'Your cart is empty.'}
+      if LineItem.find_by_cart_id(@line_item.cart_id).nil?
+       format.html { redirect_to store_url,
+        notice: 'Your cart is empty.'}
       else
         format.html { redirect_to @line_item.cart,
           notice: 'Item has been removed from your cart.' }
@@ -73,7 +75,7 @@ class LineItemsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+   
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_line_item
