@@ -65,6 +65,7 @@ class LineItemsController < ApplicationController
       if current_cart.line_items.empty?
         format.html { redirect_to store_url,
           notice: 'Your cart is empty.'}
+      else
         format.html { redirect_to @line_item.cart,
           notice: 'Item has been removed from your cart.' }
       end
