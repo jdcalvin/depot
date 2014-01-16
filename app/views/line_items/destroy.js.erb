@@ -1,0 +1,4 @@
+if ($('#cart tr').length == 0) { $('#cart').hide('blind', 500); }
+
+
+$('#cart').html("<%= escape_javascript render(@cart) %>");
