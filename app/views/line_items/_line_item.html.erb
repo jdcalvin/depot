@@ -6,6 +6,6 @@
 	<td style="width: 2em"><%= line_item.quantity %> &times;</td>
 	<td style = "width: 60%"><%= line_item.product.title %></td>
 	<td class="item_price"><%= number_to_currency(line_item.total_price) %></td>
-	<td style = "width: .5em; padding-left: 5px;"><%= link_to 'x', line_item, method: :delete, remote: true %>
-	</td>
+<td style = "width: .5em; padding-left: 5px;"><%= link_to 'x', line_item, method: :delete, remote: true %>
+        </td>	</td>
 </tr>

@@ -28,6 +28,10 @@
 		.image_container {
 			float:left;
 			width: 80px;
+
+			img:hover {
+			cursor:pointer;
+			}
 		}
 
 		.description {
